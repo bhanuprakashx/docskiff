@@ -62,6 +62,5 @@ if __name__ == "__main__":
                     pass
                 else:
                     print(the_date.strftime("%Y%m%d"))
-
             elif the_date.strftime("%Y%m%d") == fourth_saturday(the_date):
                 print(the_date.strftime("%Y%m%d"))
