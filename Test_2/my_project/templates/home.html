@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    Hello, {{ user.username|default:'Guest' }}!
+    
+    {% if user.is_authenticated %}
+        <ul> {{the_user.product_name_1}} </ul>
+        <ul> {{the_user.product_name_2}} </ul>
+    {% else %}
+        {% for product in products %}
+            <ul> 
+                Product: {{ product.name }} 
+                Price: {{ product.price }}
+            </ul>
+        {% endfor %}
+    {% endif %}
+
+{% endblock content %}
